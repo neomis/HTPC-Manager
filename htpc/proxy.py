@@ -7,11 +7,11 @@ import logging
 from cherrypy.lib.static import serve_file
 from urllib2 import Request, urlopen
 try:
-    import Image
+    from PIL import Image
     PIL = True
 except ImportError:
     try:
-        from PIL import Image
+        import Image
         PIL = True
     except ImportError:
         PIL = False
